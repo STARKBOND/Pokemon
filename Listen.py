@@ -20,11 +20,3 @@ def listen():
         except:
             print("sorry, could not recognise")
 pass
-# Install a pip package in the current Jupyter kernel
-# import sys
-# !{sys.executable} -m pip install SpeechRecognition
-# !{sys.executable} -m pip install PyAudio
-# !{sys.executable} -m pip install google
-# !{sys.executable} -m pip install --upgrade google-api-python-client
-# !{sys.executable} -m pip install google-cloud-speech
-# !{sys.executable} -m pip install pocketsphinx
