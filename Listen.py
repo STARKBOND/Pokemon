@@ -19,4 +19,5 @@ def listen():
             print(text)
         except:
             print("sorry, could not recognise")
+    return text
 pass
