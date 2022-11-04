@@ -1,7 +1,7 @@
 import csv
 from PokemonTypes import *
 
-with open('pokemon.csv', mode='r') as infile:
+with open('data/pokemon.csv', mode='r') as infile:
     reader = csv.reader(infile)
     next(reader, None)
     pokemon_data = {rows[1]:rows[2:] for rows in reader}
