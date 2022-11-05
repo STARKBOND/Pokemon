@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pokemon_nerd"
+version = "0.0.1"
+authors = [
+  { name="Cyber Scholar", email="cyberscholar1@gmail.com" },
+]
+description = "A nerdy Pokémon friend you can ask all your questions."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "SpeechRecognition >= 3.8.1",
+    "PyAudio >= 0.2.12",
+    "pocketsphinx >= 5.0.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/STARKBOND/Pokemon"
+"Bug Tracker" = "https://github.com/STARKBOND/Pokemon/issues"
+"History" = "https://github.com/STARKBOND/Pokemon/commits/main"

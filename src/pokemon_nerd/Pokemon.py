@@ -1,7 +1,13 @@
-import csv
-from PokemonTypes import *
 
-with open('data/pokemon.csv', mode='r') as infile:
+# TO DO: avoid sys path hacks, and build package to do relative imports
+import sys, csv
+[sys.path.append(i) for i in ['.', '..']] # allow imports from root dir
+
+from setup import CSV_PATH
+from PokemonTypes import *
+from Listen import *
+
+with open(CSV_PATH, mode='r') as infile:
     reader = csv.reader(infile)
     next(reader, None)
     pokemon_data = {rows[1]:rows[2:] for rows in reader}

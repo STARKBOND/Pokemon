@@ -1,11 +1,14 @@
+
+# TO DO: avoid sys path hacks, and build package to do relative imports
+import sys
+[sys.path.append(i) for i in ['.', '..']] # allow imports from root dir
+
+from setup import ACOUSTIC_DIRECTORY, LANGUAGE_MODEL_PATH, DICTIONARY_PATH
 import speech_recognition as sr
 from pyaudio import *
 from pocketsphinx import *
 
 def listen():
-    acoustic_parameters_directory = "pocketsphinx/acoustic-model"
-    language_model_file = "pocketsphinx/1827.lm" 
-    phoneme_dictionary_file = "pocketsphinx/1827.dic"
     r = sr.Recognizer()
     mic = sr.Microphone()
     with mic as source:
@@ -15,7 +18,7 @@ def listen():
         print("say anything : ")
         audio= r.listen(source)
         try:
-            text = r.recognize_sphinx(audio, language=(acoustic_parameters_directory, language_model_file, phoneme_dictionary_file))
+            text = r.recognize_sphinx(audio, language=(ACOUSTIC_DIRECTORY, LANGUAGE_MODEL_PATH, DICTIONARY_PATH))
         except:
             text = "sorry, could not recognise"
         return text

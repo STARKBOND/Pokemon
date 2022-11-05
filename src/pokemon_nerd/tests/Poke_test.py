@@ -1,12 +1,14 @@
-import sys
-import os
 
-mango_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-sys.path.append(mango_dir)
+# TO DO: avoid sys path hacks, and build package to do relative imports
+import sys, os
+[sys.path.append(i) for i in ['.', './src/pokemon_nerd']] # allow imports from root dir
 
+from setup import DATA_DIR
 from Listen import *
 
-infile = open("pocketsphinx/1827.dic", mode='r')
+dictionary_path = os.path.join(DATA_DIR, 'pocketsphinx/1827.dic') 
+
+infile = open(dictionary_path, mode='r')
 
 pokemon = {}
 
