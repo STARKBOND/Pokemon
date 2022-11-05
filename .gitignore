@@ -1,10 +1,8 @@
-__pycache__
+# mac files
+**/.DS_Store
 
-.DS_Store
-pocketsphinx/.DS_Store
-pocketsphinx/acoustic-model/.DS_Store
-pocketsphinx/references/.DS_Store
-data/.DS_Store
-tests/.DS_Store
-
+# for reference
 local/*
+
+# auto generated pycache
+**/__pycache__

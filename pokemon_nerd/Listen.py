@@ -1,9 +1,4 @@
-
-# TO DO: avoid sys path hacks, and build package to do relative imports
-import sys
-[sys.path.append(i) for i in ['.', '..']] # allow imports from root dir
-
-from setup import ACOUSTIC_DIRECTORY, LANGUAGE_MODEL_PATH, DICTIONARY_PATH
+from pokemon_nerd.paths import ACOUSTIC_DIRECTORY, LANGUAGE_MODEL_PATH, DICTIONARY_PATH
 import speech_recognition as sr
 from pyaudio import *
 from pocketsphinx import *

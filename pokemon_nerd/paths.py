@@ -1,7 +1,10 @@
-import os
+import os, sys
+[sys.path.append(i) for i in ['.', '..']] # allow imports from root dir
 
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-APP_DIR = os.path.join(ROOT_DIR,'src/pokemon_nerd')
+# print os.path.abspath(os.path.join(yourpath, os.pardir))
+
+ROOT_DIR = os.path.dirname(os.path.abspath('pokemon_nerd'))
+APP_DIR = os.path.join(ROOT_DIR,'pokemon_nerd')
 DATA_DIR = os.path.join(APP_DIR, 'data')
 CSV_PATH = os.path.join(DATA_DIR, 'pokemon.csv') 
 DICTIONARY_PATH = os.path.join(DATA_DIR, 'pocketsphinx/1827.dic')

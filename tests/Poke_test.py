@@ -1,10 +1,5 @@
-
-# TO DO: avoid sys path hacks, and build package to do relative imports
-import sys, os
-[sys.path.append(i) for i in ['.', './src/pokemon_nerd']] # allow imports from root dir
-
-from setup import DATA_DIR
-from Listen import *
+from pokemon_nerd.paths import DATA_DIR
+from pokemon_nerd.Listen import *
 
 dictionary_path = os.path.join(DATA_DIR, 'pocketsphinx/1827.dic') 
 

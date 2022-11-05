@@ -1,28 +1,30 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
-[project]
-name = "pokemon_nerd"
-version = "0.0.1"
-authors = [
-  { name="Cyber Scholar", email="cyberscholar1@gmail.com" },
-]
+[tool.poetry]
+name = "pokemon-nerd"
+version = "0.1.0"
 description = "A nerdy Pokémon friend you can ask all your questions."
+authors = ["Cyber Scholar <48360032+STARKBOND@users.noreply.github.com>"]
 readme = "README.md"
-requires-python = ">=3.7"
+packages = [
+    { include = "pokemon_nerd" },
+    { include = "tests" }
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dependencies = [
-    "SpeechRecognition >= 3.8.1",
-    "PyAudio >= 0.2.12",
-    "pocketsphinx >= 5.0.0"
-]
 
-[project.urls]
+[tool.poetry.dependencies]
+python = "^3.10"
+speechrecognition = "^3.8.1"
+pyaudio = "^0.2.12"
+pocketsphinx = "^5.0.0"
+
+[tool.poetry.urls]
 "Homepage" = "https://github.com/STARKBOND/Pokemon"
 "Bug Tracker" = "https://github.com/STARKBOND/Pokemon/issues"
 "History" = "https://github.com/STARKBOND/Pokemon/commits/main"

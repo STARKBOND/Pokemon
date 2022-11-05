@@ -1,8 +1,4 @@
-
-# TO DO: avoid sys path hacks, and build package to do relative imports
-import sys, csv
-[sys.path.append(i) for i in ['.', '..']] # allow imports from root dir
-
+import csv
 from setup import CSV_PATH
 from PokemonTypes import *
 from Listen import *
