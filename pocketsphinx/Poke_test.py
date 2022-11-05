@@ -1,3 +1,9 @@
+import sys
+import os
+
+mango_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(mango_dir)
+
 from Listen import *
 
 infile = open("pocketsphinx/1827.dic", mode='r')
@@ -10,7 +16,9 @@ for line in infile:
 for name in pokemon:
     if "ER" in pokemon[name]:
         print(name)
-        if listen() == name:
+        res = listen()
+        print(res)
+        if res == name:
             print("correct!")
         else:
             print("incorrect!")

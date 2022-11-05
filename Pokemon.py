@@ -7,6 +7,7 @@ with open('data/pokemon.csv', mode='r') as infile:
     pokemon_data = {rows[1]:rows[2:] for rows in reader}
 
 def SpawnPokemon(name: str):
+    name = name.title()
     type = [t for t in pokemon_data[name] if t != '']
     if len(type) == 1:
         pokemon = globals()[type[0]]()

@@ -30,6 +30,8 @@ class PokemonType(ABC):
             if getattr(self, attr) == None:
                 self.attrs.remove(attr)
             match(attr):
+                case "type":
+                    print("Type: {}".format(self.type))
                 case "strong_against":
                     print("Strong against: {}".format(self.strong_against))
                 case "weak_against":

@@ -10,11 +10,12 @@ def listen():
     mic = sr.Microphone()
     with mic as source:
         r.adjust_for_ambient_noise(source,duration=0.5)
-        r.energy_threshold = 400
+        #r.energy_threshold = 4000
+        r.dynamic_energy_threshold = True  
         print("say anything : ")
         audio= r.listen(source)
         try:
             text = r.recognize_sphinx(audio, language=(acoustic_parameters_directory, language_model_file, phoneme_dictionary_file))
-            print(text)
         except:
-            print("sorry, could not recognise")
+            text = "sorry, could not recognise"
+        return text
