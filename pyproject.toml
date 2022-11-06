@@ -4,12 +4,13 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "pokemon-nerd"
-version = "1.0.6"
+version = "1.0.7"
 description = "A nerdy Pokémon friend you can ask all your questions."
 authors = ["Cyber Scholar <48360032+STARKBOND@users.noreply.github.com>"]
 readme = "README.md"
 packages = [
     { include = "pokemon_nerd" },
+    { include = "pokemon_nerd", from = "../pokemon_nerd"},
     { include = "tests" }
 ]
 classifiers = [
