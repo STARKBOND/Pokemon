@@ -1,3 +1,4 @@
+import csv
 from pokemon_nerd.paths import ACOUSTIC_DIRECTORY, LANGUAGE_MODEL_PATH, DICTIONARY_PATH
 import speech_recognition as sr
 from pyaudio import *
@@ -17,3 +18,10 @@ def listen():
         except:
             text = "sorry, could not recognise"
         return text
+
+def read_csv(path: str):
+    with open(path, mode='r') as infile:
+        reader = csv.reader(infile)
+        next(reader, None)
+        pokemon_data = {rows[1]:rows[2:] for rows in reader}
+    return pokemon_data

@@ -2,7 +2,6 @@ import os, sys, pokemon_nerd
 [sys.path.append(i) for i in ['.', '..']] # allow imports from root dir
 
 ROOT_DIR =  os.path.abspath(os.path.join(pokemon_nerd.__file__ ,"../.."))
-# if 'pokemon_nerd' not in ROOT_DIR: ROOT_DIR += '\\pokemon_nerd' # Windows 
 ROOT_DIR = os.path.join(ROOT_DIR,'pokemon_nerd')
 DATA_DIR = os.path.join(ROOT_DIR, 'data')
 CSV_PATH = os.path.join(DATA_DIR, 'pokemon.csv') 

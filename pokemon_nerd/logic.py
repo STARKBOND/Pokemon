@@ -1,14 +1,11 @@
-import csv
+from pokemon_nerd.core import read_csv
 from pokemon_nerd.paths import CSV_PATH
-from pokemon_nerd.PokemonTypes import *
-from pokemon_nerd.Listen import *
+from pokemon_nerd.PokemonType import *
+from pokemon_nerd.core import *
 
-with open(CSV_PATH, mode='r') as infile:
-    reader = csv.reader(infile)
-    next(reader, None)
-    pokemon_data = {rows[1]:rows[2:] for rows in reader}
+pokemon_data = read_csv(CSV_PATH)
 
-def SpawnPokemon(name: str):
+def spawn_pokemon(name: str):
     name = name.title()
     type = [t for t in pokemon_data[name] if t != '']
     if len(type) == 1:
