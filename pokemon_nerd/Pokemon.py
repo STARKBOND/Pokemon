@@ -1,5 +1,5 @@
 import csv
-from setup import CSV_PATH
+from paths import CSV_PATH
 from PokemonTypes import *
 from Listen import *
 

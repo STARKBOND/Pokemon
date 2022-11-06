@@ -1,4 +1,4 @@
-from pokemon_nerd.paths import ACOUSTIC_DIRECTORY, LANGUAGE_MODEL_PATH, DICTIONARY_PATH
+from paths import ACOUSTIC_DIRECTORY, LANGUAGE_MODEL_PATH, DICTIONARY_PATH
 import speech_recognition as sr
 from pyaudio import *
 from pocketsphinx import *
