@@ -1,5 +1,5 @@
 from pokemon_nerd.paths import DATA_DIR
-from pokemon_nerd.Listen import *
+from pokemon_nerd.core import *
 
 dictionary_path = os.path.join(DATA_DIR, 'pocketsphinx/1827.dic') 
 
