@@ -1,7 +1,8 @@
-from abc import ABC
+from abc import ABCMeta, abstractmethod
 import types
 
-class PokemonType(ABC):
+class PokemonType(metaclass=ABCMeta):
+    @abstractmethod
     def __init__(self):
         self.strong_against = None
         self.weak_against = None
