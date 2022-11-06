@@ -1,7 +1,7 @@
 import csv
-from paths import CSV_PATH
-from PokemonTypes import *
-from Listen import *
+from pokemon_nerd.paths import CSV_PATH
+from pokemon_nerd.PokemonTypes import *
+from pokemon_nerd.Listen import *
 
 with open(CSV_PATH, mode='r') as infile:
     reader = csv.reader(infile)
